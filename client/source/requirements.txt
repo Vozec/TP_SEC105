@@ -1,0 +1,4 @@
+pwntools
+pycryptodome
+requests
+flask

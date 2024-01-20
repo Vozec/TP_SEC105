@@ -1,0 +1,59 @@
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+body {
+    background-color: #35281e;
+    font-family: 'Calibri', sans-serif;
+    color: white;
+}
+
+.message-container {
+    padding: 10px;
+    font-family: 'Calibri', sans-serif;
+    color: black;
+    font-size: 18px;
+}
+
+.message-box {
+    max-width: 50%;
+    padding-left: 10px;
+    padding-top: 12px;
+    padding-bottom: 1px;
+    padding-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.client-message-box {
+    background-color: #d4edda;
+    text-align: left;
+}
+
+.server-message-box {
+    background-color: #cce5ff;
+    margin-left: auto;
+}
+
+.modal-header {
+    background-color: #212529;
+    color: white;
+}
+
+.modal-body {
+    background-color: #221F22;
+    color: white;
+}
+
+.modal-footer {
+    background-color: #221F22;
+    justify-content: center;
+    border-top: none;
+}
+
+.btn-light,
+.btn-success,
+.btn-danger {
+    color: #212529;
+    background-color: white;
+}

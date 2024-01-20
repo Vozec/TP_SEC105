@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block page_title %}Summary{% endblock %}
+
+{% block main_content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="text-white" style="padding-left: 2%;">Messages:</h1>
+    <h4 class="mb-0" style="padding-right: 2%;color:#6C6C6C;">Refresh in <span id="countdown">10</span> seconds</h4>
+</div>
+
+
+{% if messages|length > 0 %}
+
+    {% for message in messages %}
+        <div class="message-container">
+            <div class="message-box {% if message.sender == 'client' %}client-message-box{% else %}server-message-box{% endif %}">
+                <p>{{ message.content }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+<div class="text-center d-flex align-items-center justify-content-center">
+    <p class="fs-4" style="color: gray;padding-top: 14%;">No logs have been added</p>
+</div>
+{% endif %}
+
+<div class="modal fade" id="resetPopup" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #212529; color: white;">
+                <h2 class="modal-title" id="newPopupLabel">Reset all logs</h2>
+                <button onclick="cancelDelete()" type="button" class="btn-close white-close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="background-color: #221F22">
+                <p style="color: white;">Are you sure you want to reset logs ?</p>
+            </div>
+            <div class="modal-footer" style="background-color: #221F22; justify-content: center; border-top: none;">
+                <button onclick="cancelDelete()" type="button" class="btn btn-success" data-bs-dismiss="modal" aria-label="Close">No</button>
+                <button onclick="confirmDelete()" type="button" class="btn btn-danger" data-dismiss="modal">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="{{ url_for('static', filename='js/index.js') }}"> </script>
+
+
+{% endblock %}
