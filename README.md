@@ -44,7 +44,7 @@ Le client implémente aussi un serveur WEB en Flask qui sert pour le déclenchem
 
 Voici un schéma des communications entre les machines: 
 
-![infra.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0b2a246f-c92b-48ff-8784-7b75b74fa9c7/22ad3aec-a3ce-4363-b1fe-a7154196856a/infra.png)
+![infra.png](./img/infra.png)
 
 ## Implémentation
 
@@ -127,7 +127,7 @@ Il suffit de lancer la commande suivante à la racine du projet pour démarrer l
 docker-compose up --build
 ```
 
-![docker_up.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0b2a246f-c92b-48ff-8784-7b75b74fa9c7/23c813be-b573-4ff4-95f7-da8a6fd74d9a/docker_up.png)
+![docker_up.png](./img/docker_up.png)
 
 ### Serveur Web de journalisation.
 
@@ -410,17 +410,17 @@ L’entièreté du projet avec le code est disponible dans le fichier `source.zi
 
 Voici le résultat renvoyé par le client quand je lui demande de se connecter au serveur avec 2 mots de passe différents :
 
-![start.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0b2a246f-c92b-48ff-8784-7b75b74fa9c7/8e7f74c2-926b-4d9f-aa03-988513aa7e0a/start.png)
+![start.png](./img/start.png)
 
 Voici le résultat d’un schéma d’authentification qui échoue à cause d’un mauvais mot de passe: 
 
-![win1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0b2a246f-c92b-48ff-8784-7b75b74fa9c7/3a8a8bd7-aa8f-4338-89c4-1c85c2aee1f6/win1.png)
+![win1.png](./img/win1.png)
 
 Voici le résultat d’un schéma d’authentification qui est valide avec un bon mot de passe et un bon échange de signature:
 
-![win1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0b2a246f-c92b-48ff-8784-7b75b74fa9c7/59a6b437-0847-44ab-afa8-d5c5f0a5c796/win1.png)
+![win1.png](./img/win1.png)
 
-![win2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0b2a246f-c92b-48ff-8784-7b75b74fa9c7/f0d957b1-aa22-4af4-a5cc-99075081c2c1/win2.png)
+![win2.png](./img/win2.png)
 
  
 
